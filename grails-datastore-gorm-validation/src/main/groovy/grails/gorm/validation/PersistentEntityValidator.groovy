@@ -130,6 +130,7 @@ class PersistentEntityValidator implements CascadingValidator, ConstrainedEntity
                 cascadeValidationToMany(parent, propertyName, association, errors, reflector, validatedObjects)
             }
         }
+        validatedObjects.remove(parent)
     }
 
     @CompileDynamic
