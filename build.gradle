@@ -31,7 +31,7 @@ project.ext {
     // releaseType = "RELEASE"
 //    releaseType = "M2"
 //    releaseType = "RC2"
-    releaseType = "BUILD-SNAPSHOT"
+    releaseType = "OXBRC-SNAPSHOT"
 
     // overall project version
     projectVersion = "${projectMajorVersion}.${projectMinorVersion}.${projectPatchVersion}"
@@ -50,7 +50,7 @@ project.ext {
 
 
     isCiBuild = project.hasProperty("isCiBuild")
-    isBuildSnapshot = releaseType == "BUILD-SNAPSHOT"
+    isBuildSnapshot = releaseType in ["BUILD-SNAPSHOT","OXBRC-SNAPSHOT"]
 
     servletApiVersion = "3.0.1"
 
@@ -344,10 +344,10 @@ subprojects {
                         password = p
                     }
                     if(isBuildSnapshot) {
-                        url  "https://repo.grails.org/grails/libs-snapshots-local"
+                        url  "https://jenkins.cs.ox.ac.uk/artifactory/libs-snapshot-local"
                     }
                     else {
-                        url  "https://repo.grails.org/grails/libs-releases-local"
+                        url  "https://jenkins.cs.ox.ac.uk/artifactory/libs-release-local"
                     }
 
                 }
