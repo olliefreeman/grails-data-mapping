@@ -16,7 +16,8 @@ buildscript {
 
 
 project.ext {
-    springVersion = "4.3.9.RELEASE"
+    springVersion = "4.3.14.RELEASE"
+    springBootVersion = "1.5.10.RELEASE"
     grailsVersion = "3.2.11"
     grails2Version = '2.5.6'
     slf4jVersion = "1.7.22"
@@ -28,7 +29,7 @@ project.ext {
     projectMajorVersion = "6"
     projectMinorVersion = "1"
     projectPatchVersion = "9"
-    // releaseType = "RELEASE"
+    releaseType = "RELEASE"
 //    releaseType = "M2"
 //    releaseType = "RC2"
     releaseType = "OXBRC"
